@@ -1,0 +1,52 @@
+$blue: #2e031e;
+
+$gray-600: rgb(56, 47, 47);
+
+
+$yellow: hsla(0, 51%, 84%, 0.589);
+
+
+$mobile:600px;
+
+@mixin mobile {
+    @media (max-width: #{$mobile}){
+        @content;
+    }
+
+}
+.jumbotron{
+    margin-bottom: 0px;
+    background-image: url(../images/about-us-banner.png);
+    background-position: 0% 25%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: white;
+    text-shadow: black 0.3em 0.3em 0.3em;
+         #exite{
+    color: rgb(235, 160, 62);
+    font-weight: bolder;
+   } 
+
+   @include mobile{
+  
+    height:200px;
+    width: 100%;
+    background-image: url(../images/about-us-banner.png);
+    background-position: 25% 25%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: white;
+    $mobile: 600px;
+    text-shadow: black 0.3em 0.3em 0.3em;
+    #exite{
+        color: rgb(235, 160, 62);
+        font-weight: bolder;
+        font-size: 12px;
+       } 
+    p{
+        font-size: 12px;
+    }
+
+}
+
+}
